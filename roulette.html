@@ -20,7 +20,7 @@
 <div id="done" class="result"><div class="win-icon">🚀</div><div class="win-label">ГОТОВО</div><h2 style="margin-top:7px">Заявка на подарок принята</h2><p class="subtitle" style="margin-top:10px">Username сохранён. Теперь можно перейти к странице получения.</p><button class="btn" style="margin-top:20px" onclick="location.href='Boil.html'">← Вернуться на главную</button></div>
 </div></section></main>
 <script>
-const gifts=[['🎁','Heart Locket'],['🧸','Plush Pepe'],['🍑','Precious Peach'],['🎂','Homemade Cake'],['🐰','Jelly Bunny'],['🎩','Santa Hat'],['🍷','Spiced Wine'],['🚀','Durov’s Cap'],['💎','Gem'],['🌹','Rose']];
+const gifts=[['💎','Алмаз'],['🧸','Медведь'],['🍑','Персик'],['🎂','Торт'],['💍','Кольцо'],['🎩','Шляпа Санты'],['🍷','Вино'],['🚀','Кепка Дурова'],['⭐️','1.000 Звёзд'],['⭐️⭐️','5.000 Звёзд'],['⭐️⭐️⭐️','10.000 Звёзд'].['🌹','Роза']];
 const track=document.getElementById('track');
 const items=[...Array(32)].map((_,i)=>gifts[i%gifts.length]);
 track.innerHTML=items.map(g=>`<div class="item">${g[0]}<small>${g[1]}</small></div>`).join('');
