@@ -38,7 +38,9 @@ const item=track.children[0].getBoundingClientRect().width; const gap=12; const 
 const target=-(finalIndex*(item+gap)+item/2-center);
 track.style.transition= 'transform 4.8s cubic-bezier(.10,.78,.16,1)';
 track.style.transform=translateX(${target}px);
-setTimeout(()=>{ const g=gifts[winnerIndex];
+
+setTimeout(()=>{ 
+const g=gifts[winnerIndex];
 document.getElementById('icon').textContent=g[0];
 document.getElementById('giftName').textContent=g[1];
 
@@ -46,6 +48,7 @@ document.getElementById('game').style.display='none';
 document.getElementById('result').style.display='block';
 
 spinning=false;
-},5000); }
+},5000);
+}
 function claim(){let v=document.getElementById('username').value.trim().replace(/\s/g,'');if(v.startsWith('@'))v=v.slice(1);const e=document.getElementById('error');if(!/^[A-Za-z0-9_]{5,32}$/.test(v)){e.textContent='Введите корректный Telegram username, например @example';return}localStorage.setItem('tg_username',v);document.getElementById('result').style.display='none';document.getElementById('done').style.display='block'}
 </script></body></html>
