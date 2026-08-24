@@ -22,9 +22,27 @@
 <script>
 const gifts=[['💎','Алмаз'],['🧸','Медведь'],['🍑','Персик'],['🎂','Торт'],['💍','Кольцо'],['🎩','Шляпа Санты'],['🍷','Вино'],['🚀','Кепка Дурова'],['⭐️','1.000 Звёзд'],['⭐️⭐️','5.000 Звёзд'],['⭐️⭐️⭐️','10.000 Звёзд'],['🌹','Роза']];
 const track=document.getElementById('track');
-const items=[...Array(32)].map((_,i)=>gifts[i%gifts.length]);
+const items=[...Array(100)].map((_,i)=>gifts[i%gifts.length]);
 track.innerHTML=items.map(g=>`<div class="item">${g[0]}<small>${g[1]}</small></div>`).join('');
 let spinning=false;
-function spin(){if(spinning)return;spinning=true;const btn=document.getElementById('spin');btn.disabled=true;btn.textContent='🎰 Рулетка крутится...';const winnerIndex=25;const item=track.children[0].getBoundingClientRect().width;const gap=12;const center=(document.querySelector('.window').clientWidth/2);const target=-(winnerIndex*(item+gap)+item/2-center);track.style.transition='transform 4.8s cubic-bezier(.10,.78,.16,1)';track.style.transform=`translateX(${target}px)`;setTimeout(()=>{const g=gifts[winnerIndex%gifts.length];document.getElementById('icon').textContent=g[0];document.getElementById('giftName').textContent=g[1];document.getElementById('game').style.display='none';document.getElementById('result').style.display='block';spinning=false},5000)}
+function spin(){ if(spinning)return;
+spinning=true;
+const btn=document.getElementById('spin'); btn.disabled=true; btn.textContent='🎰 Рулетка крутится...';
+// Случайный подарок const winnerIndex=Math.floor(Math.random()*gifts.length);
+// Сколько полных кругов сделает рулетка const rounds=6;
+// Индекс карточки, на которой остановимся const finalIndex=rounds*gifts.length+winnerIndex;
+const item=track.children[0].getBoundingClientRect().width; const gap=12; const center=document.querySelector('.window').clientWidth/2;
+const target=-(finalIndex*(item+gap)+item/2-center);
+track.style.transition= 'transform 4.8s cubic-bezier(.10,.78,.16,1)';
+track.style.transform=translateX(${target}px);
+setTimeout(()=>{ const g=gifts[winnerIndex];
+document.getElementById('icon').textContent=g[0];
+document.getElementById('giftName').textContent=g[1];
+
+document.getElementById('game').style.display='none';
+document.getElementById('result').style.display='block';
+
+spinning=false;
+},5000); }
 function claim(){let v=document.getElementById('username').value.trim().replace(/\s/g,'');if(v.startsWith('@'))v=v.slice(1);const e=document.getElementById('error');if(!/^[A-Za-z0-9_]{5,32}$/.test(v)){e.textContent='Введите корректный Telegram username, например @example';return}localStorage.setItem('tg_username',v);document.getElementById('result').style.display='none';document.getElementById('done').style.display='block'}
 </script></body></html>
