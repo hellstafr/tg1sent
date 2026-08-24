@@ -28,9 +28,12 @@ let spinning=false;
 function spin(){ if(spinning)return;
 spinning=true;
 const btn=document.getElementById('spin'); btn.disabled=true; btn.textContent='🎰 Рулетка крутится...';
-// Случайный подарок const winnerIndex=Math.floor(Math.random()*gifts.length);
-// Сколько полных кругов сделает рулетка const rounds=6;
-// Индекс карточки, на которой остановимся const finalIndex=rounds*gifts.length+winnerIndex;
+// Случайный подарок 
+const winnerIndex=Math.floor(Math.random()*gifts.length);
+// Сколько полных кругов сделает рулетка 
+const rounds=6;
+// Индекс карточки, на которой остановимся const 
+finalIndex=rounds*gifts.length+winnerIndex;
 const item=track.children[0].getBoundingClientRect().width; const gap=12; const center=document.querySelector('.window').clientWidth/2;
 const target=-(finalIndex*(item+gap)+item/2-center);
 track.style.transition= 'transform 4.8s cubic-bezier(.10,.78,.16,1)';
