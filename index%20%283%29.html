@@ -1,0 +1,446 @@
+ё<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#07101f" name="theme-color"/>
+<meta content="Подарки к 1 сентября — праздничная независимая раздача Telegram-подарков." name="description"/>
+<title>September Gift - Подарки к 1 сентября 🎁</title>
+<style>
+:root{
+  --bg:#050a14;--panel:#0b1424;--panel2:#0e1a2d;--line:rgba(255,255,255,.09);
+  --text:#f7faff;--muted:#8e9bb0;--blue:#238cff;--blue2:#55b7ff;
+  --purple:#735cff;--green:#35e6a0;--shadow:0 24px 80px rgba(0,0,0,.45)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  color:var(--text);background:
+  radial-gradient(circle at 78% 10%,rgba(35,140,255,.16),transparent 28%),
+  radial-gradient(circle at 20% 45%,rgba(115,92,255,.10),transparent 30%),var(--bg);
+  overflow-x:hidden
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1160px,calc(100% - 36px));margin:auto}
+.nav{
+  height:78px;display:flex;align-items:center;justify-content:space-between;
+  position:relative;z-index:5
+}
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.4px}
+.logo-icon{
+  width:40px;height:40px;border-radius:13px;display:grid;place-items:center;
+  background:linear-gradient(135deg,#1478ff,#735cff);box-shadow:0 10px 30px rgba(35,140,255,.25);font-size:22px
+}
+.logo small{display:block;color:var(--blue2);font-size:10px;letter-spacing:1.4px;margin-top:2px}
+.menu{display:flex;gap:30px;color:#aeb9ca;font-size:14px}
+.menu a{transition:.2s}.menu a:hover{color:#fff}
+.btn{
+  border:0;color:white;cursor:pointer;font-weight:800;border-radius:13px;padding:14px 21px;
+  background:linear-gradient(135deg,#1685ff,#4a66ff);box-shadow:0 12px 35px rgba(35,140,255,.25);
+  transition:transform .2s,box-shadow .2s,filter .2s
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(35,140,255,.38);filter:brightness(1.08)}
+.hero{padding:82px 0 70px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:45px}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid var(--line);
+  border-radius:999px;background:rgba(255,255,255,.045);color:#d7dfeb;font-size:12px;font-weight:800
+}
+h1{font-size:clamp(48px,7vw,82px);line-height:.94;letter-spacing:-4px;margin:21px 0}
+.gradient{background:linear-gradient(90deg,#fff 10%,#55b7ff 52%,#7567ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;line-height:1.65;color:#aab5c5;max-width:570px}
+.hero-actions{display:flex;gap:13px;align-items:center;margin-top:30px;flex-wrap:wrap}
+.btn.big{padding:17px 26px;font-size:15px}
+.ghost{padding:16px 22px;border:1px solid var(--line);border-radius:13px;color:#d7dfeb;background:rgba(255,255,255,.035);font-weight:750}
+.counterline{display:flex;align-items:center;gap:10px;margin-top:25px;color:#77859b;font-size:13px}
+.dot{width:8px;height:8px;border-radius:50%;background:#35e6a0;box-shadow:0 0 14px #35e6a0}
+.hero-art{min-height:460px;display:grid;place-items:center;position:relative}
+.glow{position:absolute;width:340px;height:340px;border-radius:50%;background:#1478ff;filter:blur(100px);opacity:.23}
+.gift{
+  width:280px;height:225px;position:relative;border-radius:24px;background:linear-gradient(145deg,#edf6ff,#7bbcff);
+  box-shadow:0 30px 80px rgba(30,139,255,.32),inset 0 1px 0 white;transform:rotate(-4deg);
+  animation:float 4s ease-in-out infinite
+}
+.gift:before{content:"";position:absolute;left:112px;top:0;width:43px;height:225px;background:linear-gradient(90deg,#176fff,#68c1ff);box-shadow:0 0 20px rgba(31,126,255,.4)}
+.gift:after{content:"";position:absolute;left:0;top:75px;width:280px;height:43px;background:linear-gradient(#247cff,#58b6ff)}
+.lid{position:absolute;z-index:2;left:-16px;top:-25px;width:312px;height:72px;border-radius:20px;background:linear-gradient(145deg,#fff,#a9d6ff);box-shadow:0 12px 25px rgba(0,0,0,.18)}
+.bow{position:absolute;z-index:3;left:110px;top:-65px;width:50px;height:50px;border:18px solid #287cff;border-radius:50% 50% 12px 50%;transform:rotate(25deg)}
+.bow.r{left:137px;transform:scaleX(-1) rotate(25deg)}
+.ribbon-logo{position:absolute;z-index:4;left:103px;top:82px;width:76px;height:76px;border-radius:50%;background:#1685ff;color:white;display:grid;place-items:center;font-size:34px;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.spark{position:absolute;color:#6cc4ff;font-size:24px;animation:pulse 2.2s infinite}
+.s1{top:45px;left:8%}.s2{right:8%;top:90px;font-size:35px}.s3{bottom:40px;left:12%;font-size:31px}.s4{right:12%;bottom:50px}
+@keyframes float{50%{transform:translateY(-14px) rotate(3deg)}}
+@keyframes pulse{50%{opacity:.3;transform:scale(.75)}}
+.section{padding:82px 0}
+.section-head{text-align:center;margin-bottom:36px}
+.section-head h2{font-size:clamp(30px,4vw,44px);letter-spacing:-1.7px}
+.section-head p{color:var(--muted);margin-top:10px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{
+  position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(18,31,52,.9),rgba(9,17,30,.9));
+  border:1px solid var(--line);border-radius:20px;padding:22px;min-height:235px;
+  transition:.25s
+}
+.card:hover{transform:translateY(-5px);border-color:rgba(67,153,255,.35);box-shadow:var(--shadow)}
+.card .new{position:absolute;top:14px;right:14px;font-size:10px;font-weight:900;padding:5px 8px;border-radius:7px;background:#176fff}
+.card-icon{font-size:52px;margin:12px 0 19px;filter:drop-shadow(0 12px 18px rgba(30,130,255,.22))}.card-icon img{width:52px;height:52px;object-fit:contain;display:block}
+.card h3{font-size:17px}.card p{font-size:12px;color:var(--muted);margin-top:7px}
+.card .free{display:inline-block;margin-top:18px;font-size:11px;font-weight:900;color:#fff;background:rgba(35,140,255,.15);border:1px solid rgba(35,140,255,.25);padding:7px 10px;border-radius:8px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{padding:30px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.025);position:relative}
+.num{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#187fff,#705cff);font-weight:900;margin-bottom:20px}
+.step h3{font-size:20px}.step p{color:var(--muted);line-height:1.6;margin-top:8px;font-size:14px}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.025);overflow:hidden}
+.benefit{padding:27px 23px;border-right:1px solid var(--line)}.benefit:last-child{border:0}
+.benefit b{display:block;margin-bottom:7px}.benefit span{font-size:13px;color:var(--muted);line-height:1.5}
+.faq-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}
+.faq{border:1px solid var(--line);border-radius:18px;overflow:hidden}
+details{border-bottom:1px solid var(--line);background:rgba(255,255,255,.018)}
+details:last-child{border:0}summary{cursor:pointer;list-style:none;padding:20px;font-weight:750}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";float:right;color:#6d7e96;font-size:21px}details[open] summary:after{content:"−"}
+details p{padding:0 20px 20px;color:var(--muted);font-size:14px;line-height:1.6}
+.cta{
+  border:1px solid rgba(56,148,255,.2);border-radius:27px;padding:34px;
+  background:radial-gradient(circle at 80% 10%,rgba(35,140,255,.16),transparent 35%),linear-gradient(145deg,#0d1a2d,#09111e);
+  display:flex;justify-content:space-between;align-items:center;gap:25px
+}
+.cta h2{font-size:30px;letter-spacing:-1px}.cta p{color:var(--muted);margin-top:8px}
+.timer{display:flex;gap:9px;margin-top:18px}.time{min-width:70px;text-align:center;padding:11px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03)}.time strong{font-size:20px;display:block}.time small{font-size:9px;color:var(--muted)}
+footer{padding:30px 0 40px;border-top:1px solid var(--line);color:#69778c;font-size:12px}
+.footer{display:flex;justify-content:space-between;gap:20px}.disclaimer{margin-top:9px}
+.modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.72);backdrop-filter:blur(12px);display:none;place-items:center;padding:20px}
+.modal.show{display:grid}
+.modal-box{width:min(460px,100%);border:1px solid var(--line);border-radius:25px;background:#0b1525;padding:30px;text-align:center;box-shadow:var(--shadow)}
+.modal-icon{font-size:60px;margin-bottom:10px}.modal-box h3{font-size:27px}.modal-box p{color:var(--muted);line-height:1.6;margin:10px 0 22px}.close{margin-top:10px;width:100%;background:transparent;border:1px solid var(--line);color:#aeb9ca;padding:12px;border-radius:12px;cursor:pointer}
+@media(max-width:900px){
+ .menu{display:none}.hero-grid,.faq-wrap{grid-template-columns:1fr}.hero{padding-top:45px}.hero-art{min-height:390px}
+ .cards{grid-template-columns:repeat(2,1fr)}.benefits{grid-template-columns:repeat(2,1fr)}.benefit:nth-child(2){border-right:0}.benefit:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .cta{flex-direction:column;align-items:flex-start}.steps{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+ .container{width:min(100% - 24px,1160px)}.nav{height:68px}.nav>.btn{display:none}
+ h1{letter-spacing:-2.5px}.hero p{font-size:16px}.hero{padding-bottom:30px}
+ .cards{grid-template-columns:1fr 1fr;gap:9px}.card{padding:15px;min-height:205px}.card-icon{font-size:40px}.card h3{font-size:14px}
+ .benefits{grid-template-columns:1fr}.benefit{border-right:0!important;border-bottom:1px solid var(--line)}.benefit:last-child{border-bottom:0}
+ .cta{padding:25px}.cta h2{font-size:25px}.time{min-width:60px}
+ .footer{flex-direction:column}.hero-art{transform:scale(.82);margin:-20px 0}
+}
+
+.modal-x{position:absolute;right:18px;top:13px;border:0;background:transparent;color:#73829a;font-size:28px;cursor:pointer}
+.modal-box{position:relative}
+.roulette{margin:25px auto 20px;max-width:390px;position:relative}
+.roulette-pointer{position:absolute;z-index:5;left:50%;top:-14px;transform:translateX(-50%);color:#55b7ff;font-size:23px;text-shadow:0 0 16px #238cff}
+.roulette-window{overflow:hidden;border:1px solid rgba(83,165,255,.3);border-radius:18px;background:#07111f;box-shadow:inset 0 0 30px rgba(35,140,255,.08)}
+.roulette-track{display:flex;gap:10px;padding:18px 10px;transform:translateX(0);will-change:transform}
+.r-item{flex:0 0 82px;height:105px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:linear-gradient(180deg,#12213a,#0a1424);display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:37px}
+.r-item img{width:54px;height:54px;object-fit:contain;display:block}.r-item small{font-size:10px;color:#9aa9bd;margin-top:8px;font-weight:700}
+.roulette-note{font-size:11px;color:#697a91;margin-top:12px}
+.roulette-btn:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.win-icon{font-size:76px;margin:5px 0 8px;filter:drop-shadow(0 12px 30px rgba(35,140,255,.3));animation:winpop .5s ease}
+@keyframes winpop{0%{transform:scale(.5);opacity:0}100%{transform:scale(1);opacity:1}}
+.win-label{font-size:11px;font-weight:900;color:#55b7ff;letter-spacing:2px}
+.won-gift{margin:17px auto;padding:12px 18px;border-radius:12px;background:rgba(35,140,255,.1);border:1px solid rgba(35,140,255,.25);font-weight:900;color:#eaf5ff}
+.tg-input{width:100%;padding:16px;border-radius:13px;border:1px solid rgba(255,255,255,.1);background:#07111f;color:#fff;outline:none;font-size:15px;margin:4px 0 6px}
+.tg-input:focus{border-color:#238cff;box-shadow:0 0 0 3px rgba(35,140,255,.1)}
+.input-error{min-height:18px;color:#ff6b7a;font-size:11px;margin-bottom:5px}
+.safe-note{font-size:10px;color:#687990;margin-top:12px}
+@media(max-width:560px){.modal-box{padding:25px 17px}.r-item{flex-basis:76px}.r-item img{width:48px;height:48px}}
+
+/* ===== SECOND PAGE: GIFT ROULETTE ===== */
+.gift-page{display:none;min-height:100vh;background:
+ radial-gradient(circle at 50% 18%,rgba(35,140,255,.18),transparent 32%),
+ radial-gradient(circle at 20% 70%,rgba(115,92,255,.12),transparent 32%),var(--bg);padding:28px 0 60px;}
+.gift-page.show{display:block;animation:pageIn .35s ease}
+@keyframes pageIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.gift-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:34px}
+.back-btn{border:1px solid var(--line);background:rgba(255,255,255,.04);color:#d7dfeb;border-radius:12px;padding:11px 15px;cursor:pointer;font-weight:800}
+.roulette-page-box{width:min(760px,100%);margin:auto;text-align:center}
+.roulette-page-box h2{font-size:clamp(34px,6vw,54px);letter-spacing:-2px;margin:14px 0 10px}
+.roulette-page-box>p{color:var(--muted);line-height:1.6;max-width:560px;margin:0 auto}
+.roulette-stage{margin:38px auto 24px;position:relative;max-width:700px}
+.roulette-pointer{position:absolute;z-index:5;left:50%;top:-18px;transform:translateX(-50%);color:#55b7ff;font-size:28px;text-shadow:0 0 18px #238cff}
+.roulette-window{overflow:hidden;border:1px solid rgba(83,165,255,.32);border-radius:24px;background:linear-gradient(180deg,#07111f,#09172a);box-shadow:inset 0 0 45px rgba(35,140,255,.09),0 25px 70px rgba(0,0,0,.3)}
+.roulette-track{display:flex;gap:14px;padding:28px 18px;transform:translateX(0);will-change:transform}
+.r-item{flex:0 0 112px;height:142px;border:1px solid rgba(255,255,255,.09);border-radius:18px;background:linear-gradient(180deg,#142642,#0a1424);display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:54px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+.r-item small{font-size:11px;color:#9aa9bd;margin-top:10px;font-weight:800;white-space:nowrap}
+.roulette-marker{position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(transparent,#55b7ff,transparent);box-shadow:0 0 20px rgba(35,140,255,.7);transform:translateX(-50%);pointer-events:none}
+.spin-big{min-width:260px}
+.roulette-note{font-size:11px;color:#697a91;margin-top:13px}
+.page-win{display:none;animation:winpop .45s ease}
+.page-win.show{display:block}
+.win-icon img{width:110px;height:110px;object-fit:contain;display:block;margin:0 auto}.win-icon{font-size:110px;margin:20px 0 10px;filter:drop-shadow(0 15px 35px rgba(35,140,255,.35))}
+.win-label{font-size:11px;font-weight:900;color:#55b7ff;letter-spacing:2px}
+.won-gift{display:inline-block;margin:18px auto;padding:13px 20px;border-radius:13px;background:rgba(35,140,255,.1);border:1px solid rgba(35,140,255,.25);font-weight:900;color:#eaf5ff}
+.claim-box{width:min(440px,100%);margin:24px auto 0}
+.tg-input{width:100%;padding:17px;border-radius:13px;border:1px solid rgba(255,255,255,.1);background:#07111f;color:#fff;outline:none;font-size:15px;margin:4px 0 7px}
+.tg-input:focus{border-color:#238cff;box-shadow:0 0 0 3px rgba(35,140,255,.1)}
+.input-error{min-height:18px;color:#ff6b7a;font-size:11px;margin-bottom:7px}
+.safe-note{font-size:10px;color:#687990;margin-top:12px}
+.claim-done{display:none}
+.claim-done.show{display:block;animation:pageIn .35s ease}
+.gift-page .claim-btn{width:100%}
+@media(max-width:560px){.gift-page{padding-top:18px}.gift-top{margin-bottom:22px}.r-item{flex-basis:92px;height:125px;font-size:44px}.r-item img{width:54px;height:54px}.roulette-track{gap:10px;padding:24px 12px}.roulette-stage{margin-top:30px}.roulette-window{border-radius:18px}.spin-big{min-width:0;width:100%}}
+
+</style>
+</head>
+<body>
+<header class="container nav">
+<a class="logo" href="#">
+<div class="logo-icon">🎁</div>
+<div>September <span style="color:#55b7ff">Gift</span><small>Подарки к 1 сентября</small></div>
+</a>
+<nav class="menu">
+<a href="#gifts">Подарки</a>
+<a href="#how">Как получить</a>
+<a href="#faq">Вопросы</a>
+</nav>
+<button class="btn" onclick="window.location.href='roulette.html'">🎁 Получить подарок</button>
+</header>
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<span class="badge">🔔 Праздничная раздача к 1 сентября</span>
+<h1>ПОДАРКИ<br/><span class="gradient">К 1 СЕНТЯБРЯ</span></h1>
+<p>Праздничная подборка Telegram-подарков. Выбирай понравившийся подарок и забирай его бесплатно, пока он есть в наличии.</p>
+<div class="hero-actions">
+<button class="btn big" onclick="window.location.href='roulette.html'">✈️ Получить подарок бесплатно</button>
+<a class="ghost" href="#gifts">Смотреть подарки ↓</a>
+</div>
+<div class="counterline"><span class="dot"></span> Раздача ограничена по количеству подарков</div>
+</div>
+<div class="hero-art">
+<div class="glow"></div>
+<span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span><span class="spark s4">✧</span>
+<div class="gift">
+<div class="lid"></div><div class="bow"></div><div class="bow r"></div>
+<div class="ribbon-logo">✈</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="gifts">
+<div class="container">
+<div class="section-head">
+<h2>Какие подарки можно получить?</h2>
+<p>Выбирай любой доступный вариант — количество ограничено</p>
+</div>
+<div class="cards">
+<article class="card"><span class="new">NEW</span><div class="card-icon"><img src="images/diamond.png" alt="Алмаз"></div><h3>Алмаз</h3><p>Праздничный подарок</p><span class="free">БЕСПЛАТНО</span></article>
+<article class="card"><span class="new">NEW</span><div class="card-icon"><img src="images/bear.png" alt="Медведь"></div><h3>Медведь</h3><p>Для новых начинаний</p><span class="free">БЕСПЛАТНО</span></article>
+<article class="card"><span class="new">NEW</span><div class="card-icon"><img src="images/ring.png" alt="Кольцо"></div><h3>Кольцо</h3><p>С праздником</p><span class="free">БЕСПЛАТНО</span></article>
+<article class="card"><span class="new">NEW</span><div class="card-icon"><img src="images/peach.png" alt="Персик"></div><h3>Персик</h3><p>Сладки сюрприз</p><span class="free">БЕСПЛАТНО</span></article>
+<article class="card"><span class="new">NEW</span><div class="card-icon"><img src="images/santa-hat.png" alt="Шляпа Санты"></div><h3>Шляпа санты</h3><p>С новым годом</p><span class="free">БЕСПЛАТНО</span></article>
+<article class="card"><span class="new">NEW</span><div class="card-icon"><img src="images/stars-1000.png" alt="1.000 Звёзд"></div><h3>1.000 Звёзд</h3><p>Эксклюзивный подарок</p><span class="free">БЕСПЛАТНО</span></article>
+<article class="card"><span class="new">NEW</span><div class="card-icon"><img src="images/stars-5000.png" alt="5.000 Звёзд"></div><h3>5.000 Звёзд</h3><p>Эксклюзивный подарок</p><span class="free">БЕСПЛАТНО</span></article>
+<article class="card"><span class="new">NEW</span><div class="card-icon"><img src="images/stars-10000.png" alt="10.000 Звёзд"></div><h3>10.000 Звёзд</h3><p>Эксклюзивный подарок</p><span class="free">БЕСПЛАТНО</span></article>
+</div>
+</div>
+</section>
+<section class="section" id="how">
+<div class="container">
+<div class="section-head"><h2>Как получить подарок?</h2><p>Всего три простых шага</p></div>
+<div class="steps">
+<div class="step"><div class="num">1</div><h3>Нажми кнопку</h3><p>Выбери любой подарок и нажми «Получить подарок».</p></div>
+<div class="step"><div class="num">2</div><h3>Выбери подарок</h3><p>Посмотри доступные варианты и выбери понравившийся.</p></div>
+<div class="step"><div class="num">3</div><h3>Забери бесплатно</h3><p>Следуй инструкции на экране, чтобы завершить получение.</p></div>
+</div>
+</div>
+</section>
+<section class="section" style="padding-top:0">
+<div class="container">
+<div class="benefits">
+<div class="benefit"><b>⚡ Бесплатно</b><span>Без обязательной оплаты за участие.</span></div>
+<div class="benefit"><b>🛡️ Безопасно</b><span>Не вводи пароли, коды входа и данные банковских карт.</span></div>
+<div class="benefit"><b>🚀 Быстро</b><span>Выбор подарка занимает всего несколько секунд.</span></div>
+<div class="benefit"><b>🎉 Ограничено</b><span>Подарки доступны только пока ос
+<summary>Нужно ли вводить пароль Telegram?</summary><p>Нет. Никому не передавай пароль, код входа или резервные коды Telegram.</p>
+<details><summary>Как долго доступны подарки?</summary><p>До окончания праздничной акции или пока не закончится лимит конкретного подарка.</p></details>
+<details><summary>Можно ли получить несколько?</summary><p>Количество подарков может быть ограничено правилами текущей раздачи.</p></details>
+</span></div>
+</div>
+<div class="cta">
+<div>
+<h2>Успей забрать подарок 🎁</h2>
+<p>Праздничная акция действует ограниченное время.</p>
+<div class="timer">
+<div class="time"><strong id="days">00</strong><small>ДНЕЙ</small></div>
+<div class="time"><strong id="hours">00</strong><small>ЧАСОВ</small></div>
+<div class="time"><strong id="mins">00</strong><small>МИНУТ</small></div>
+<div class="time"><strong id="secs">00</strong><small>СЕКУНД</small></div>
+</div>
+</div>
+<button class="btn big" onclick="window.location.href='roulette.html'">✈️ Получить подарок</button>
+</div>
+</div>
+
+</section>
+</main>
+<section class="gift-page" id="giftPage">
+<div class="container">
+<div class="gift-top">
+<button class="back-btn" onclick="backToHome()">← Назад</button>
+<div class="logo"><div class="logo-icon">🎁</div><div>September <span style="color:#55b7ff">Gift</span><small>Подарки к 1 сентября</small></div></div>
+<div style="width:78px"></div>
+</div>
+<div class="roulette-page-box" id="rouletteScreen">
+<span class="badge">🎁 Подарки Telegram</span>
+<h2>Крути рулетку</h2>
+<p>Подарки пролетают перед тобой — дождись остановки и узнай, какой вариант выпадет.</p>
+<div class="roulette-stage">
+<div class="roulette-pointer">▼</div>
+<div class="roulette-window">
+<div class="roulette-track" id="pageRouletteTrack"></div>
+</div>
+<div class="roulette-marker"></div>
+</div>
+<button class="btn big spin-big" id="pageSpinBtn" onclick="spinPageRoulette()">🎰 Крутить рулетку</button>
+<div class="roulette-note">Один бесплатный прокрут</div>
+</div>
+<div class="roulette-page-box page-win" id="pageWin">
+<div class="win-icon" id="pageWinIcon"><img src="images/gift.png" alt="Подарок"></div>
+<div class="win-label">ПОЗДРАВЛЯЕМ!</div>
+<h2 style="font-size:40px">Подарок твой</h2>
+<div class="won-gift" id="pageWonGift">Подарок Telegram</div>
+<p>Чтобы оформить получение, введи свой Telegram username.</p>
+<div class="claim-box">
+<input autocomplete="off" class="tg-input" id="pageTgUser" maxlength="32" placeholder="@username"/>
+<div class="input-error" id="pageInputError"></div>
+<button class="btn big claim-btn" onclick="claimPageGift()">🎁 Забрать подарок</button>
+<div class="safe-note">🔒 Нужен только username. Никогда не вводи пароль или код входа Telegram.</div>
+</div>
+</div>
+<div class="roulette-page-box claim-done" id="claimDone">
+<div class="win-icon">🚀</div>
+<div class="win-label">ГОТОВО</div>
+<h2 style="font-size:40px">Заявка оформлена</h2>
+<p>Username сохранён на этой странице. Для реальной выдачи подарка подключи своего Telegram-бота или backend.</p>
+<button class="btn big" onclick="backToHome()" style="margin-top:24px">← Вернуться на главную</button>
+</div>
+</div>
+</section>
+<footer>
+<div class="container footer">
+<div><strong style="color:#dce7f5">🎁 ПОДАРКИ К 1 СЕНТЯБРЯ</strong><div class="disclaimer">Независимый праздничный проект. Не является официальным сайтом Telegram.</div></div>
+<div>© 2026 · Праздничная раздача</div>
+</div>
+</footer>
+
+<script>
+const tgGifts=[
+  {icon:'images/santa-hat.png',name:"Шляпа Санты"},
+  {icon:'images/peach.png',name:'Персик'},
+  {icon:'images/diamond.png',name:'Алмаз'},
+  {icon:'images/bear.png',name:'Медведь'},
+  {icon:'images/cake.png',name:'Торт'},
+  {icon:'images/ring.png',name:'Кольцо'},
+  {icon:'images/wine.png',name:'Вино'},
+  {icon:'images/stars-1000.png',name:'1.000 Звёзд'},
+  {icon:'images/stars-5000.png',name:'5.000 Звёзд'},
+  {icon:'images/stars-10000.png',name:'10.000 Звёзд'},
+  {icon:'images/durov-cap.png',name:"Кепка Дурова"}
+];
+let pageSpinning=false;
+let pageWinner=null;
+
+
+function backToHome(){
+  if(pageSpinning)return;
+  document.getElementById('giftPage').classList.remove('show');
+  document.querySelector('header').style.display='flex';
+  document.querySelector('main').style.display='block';
+  document.querySelector('footer').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!pageSpinning)backToHome()});
+
+function buildPageRoulette(){
+  const track=document.getElementById('pageRouletteTrack');
+  track.innerHTML='';
+  const sequence=[];
+  for(let round=0;round<5;round++)sequence.push(...tgGifts);
+  sequence.forEach((gift,i)=>{
+    const el=document.createElement('div');
+    el.className='r-item';
+    el.innerHTML='<img src="'+gift.icon+'" alt="'+gift.name+'"><small>'+gift.name+'</small>';
+    el.dataset.index=i;
+    track.appendChild(el);
+  });
+}
+
+function resetPageRoulette(){
+  pageSpinning=false;
+  pageWinner=null;
+  document.getElementById('rouletteScreen').style.display='block';
+  document.getElementById('pageWin').classList.remove('show');
+  document.getElementById('claimDone').classList.remove('show');
+  document.getElementById('pageSpinBtn').disabled=false;
+  document.getElementById('pageSpinBtn').textContent='🎰 Крутить рулетку';
+  document.getElementById('pageTgUser').value='';
+  document.getElementById('pageInputError').textContent='';
+  buildPageRoulette();
+  const track=document.getElementById('pageRouletteTrack');
+  track.style.transition='none';
+  track.style.transform='translateX(0)';
+}
+
+function spinPageRoulette(){
+  if(pageSpinning)return;
+  pageSpinning=true;
+  const btn=document.getElementById('pageSpinBtn');
+  btn.disabled=true;
+  btn.textContent='🎰 Рулетка крутится...';
+
+  const track=document.getElementById('pageRouletteTrack');
+  const itemWidth=126;
+  const winnerIndex=29;
+  pageWinner=tgGifts[(winnerIndex)%tgGifts.length];
+  const target=-(winnerIndex*itemWidth-294);
+  track.style.transition='transform 5.2s cubic-bezier(.08,.76,.12,1)';
+  track.style.transform='translateX('+target+'px)';
+
+  setTimeout(()=>{
+    document.getElementById('pageWinIcon').innerHTML='<img src="'+pageWinner.icon+'" alt="'+pageWinner.name+'">';
+    document.getElementById('pageWonGift').textContent=pageWinner.name;
+    document.getElementById('rouletteScreen').style.display='none';
+    document.getElementById('pageWin').classList.add('show');
+    pageSpinning=false;
+  },5500);
+}
+
+function claimPageGift(){
+  const input=document.getElementById('pageTgUser');
+  const error=document.getElementById('pageInputError');
+  let value=input.value.trim().replace(/\s/g,'');
+  if(value.startsWith('@'))value=value.slice(1);
+  if(!/^[A-Za-z0-9_]{5,32}$/.test(value)){
+    error.textContent='Введите корректный Telegram username, например @example';
+    input.focus();
+    return;
+  }
+  localStorage.setItem('tg_username',value);
+  localStorage.setItem('won_gift',pageWinner?pageWinner.name:'Telegram Gift');
+  document.getElementById('pageWin').classList.remove('show');
+  document.getElementById('claimDone').classList.add('show');
+}
+
+const end = new Date('2026-09-10T23:59:59+02:00').getTime();
+function tick(){
+  let diff=Math.max(0,end-Date.now());
+  const d=Math.floor(diff/86400000); diff%=86400000;
+  const h=Math.floor(diff/3600000); diff%=3600000;
+  const m=Math.floor(diff/60000); const s=Math.floor(diff/1000)%60;
+  document.getElementById('days').textContent=String(d).padStart(2,'0');
+  document.getElementById('hours').textContent=String(h).padStart(2,'0');
+  document.getElementById('mins').textContent=String(m).padStart(2,'0');
+  document.getElementById('secs').textContent=String(s).padStart(2,'0');
+}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
