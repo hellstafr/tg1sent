@@ -182,8 +182,68 @@ footer{padding:30px 0 40px;border-top:1px solid var(--line);color:#69778c;font-s
 .safe-note{font-size:10px;color:#687990;margin-top:12px}
 .claim-done{display:none}
 .claim-done.show{display:block;animation:pageIn .35s ease}
-.gift-page .claim-btn{width:100%}
+.gift-page .claim-btn{width:100%}\
 @media(max-width:560px){.gift-page{padding-top:18px}.gift-top{margin-bottom:22px}.r-item{flex-basis:92px;height:125px;font-size:44px}.r-item img{width:54px;height:54px}.roulette-track{gap:10px;padding:24px 12px}.roulette-stage{margin-top:30px}.roulette-window{border-radius:18px}.spin-big{min-width:0;width:100%}}
+.footer-info-wrap{
+  text-align:right;
+}
+
+.footer-link{
+  border:0;
+  background:none;
+  color:#69778c;
+  font:inherit;
+  font-size:12px;
+  cursor:pointer;
+  padding:0;
+  transition:color .2s;
+}
+
+.footer-link:hover{
+  color:#dce7f5;
+}
+
+.footer-info{
+  display:none;
+  width:min(430px, 100%);
+  margin-top:12px;
+  padding:15px 17px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:rgba(255,255,255,.035);
+  color:#8e9bb0;
+  font-size:12px;
+  line-height:1.6;
+  text-align:left;
+  box-shadow:0 10px 35px rgba(0,0,0,.2);
+}
+
+.footer-info.show{
+  display:block;
+}
+
+.footer-info p{
+  margin:0 0 9px;
+}
+
+.footer-info p:last-child{
+  margin-bottom:0;
+}
+
+.footer-info a{
+  color:#55b7ff;
+  text-decoration:underline;
+}
+
+@media(max-width:560px){
+  .footer-info-wrap{
+    text-align:left;
+  }
+
+  .footer-info{
+    width:100%;
+  }
+}
 
 </style>
 </head>
@@ -313,13 +373,50 @@ footer{padding:30px 0 40px;border-top:1px solid var(--line);color:#69778c;font-s
 </div>
 </section>
 <footer>
-<div class="container footer">
-<div><strong style="color:#dce7f5">🎁 ПОДАРКИ К 1 СЕНТЯБРЯ</strong><div class="disclaimer">Независимый праздничный проект. Не является официальным сайтом Telegram.</div></div>
-<div>© 2026 · Праздничная раздача</div>
-</div>
+  <div class="container footer">
+    
+    <div>
+      <strong style="color:#dce7f5">🎁 ПОДАРКИ К 1 СЕНТЯБРЯ</strong>
+      <div class="disclaimer">
+        Независимый праздничный проект. Не является официальным сайтом Telegram.
+      </div>
+    </div>
+
+    <div class="footer-info-wrap">
+      <button class="footer-link" onclick="toggleFooterInfo()">
+        © 2026 · Подарки Telegram
+      </button>
+
+      <div id="footerInfo" class="footer-info">
+        <p>
+          Игровая механика этого сайта не предполагает моментальное получение подарка.
+        </p>
+
+        <p>
+          Для участия в розыгрыше вам необходимо иметь 10 дней оплаченных услуг.
+        </p>
+
+        <p>
+          Подробнее на сайте <a href="#" onclick="return false;">Акции</a>.
+        </p>
+
+        <p>
+          Мы не храним персональные данные и не передаем их третьим лицам.
+        </p>
+      </div>
+    </div>
+
+  </div>
 </footer>
 
 <script>
+
+javascript
+function toggleFooterInfo(){
+  const info = document.getElementById('footerInfo');
+  info.classList.toggle('show');
+}
+
 const tgGifts=[
   {icon:'images/santa-hat.png',name:"Шляпа Санты"},
   {icon:'images/peach.png',name:'Персик'},
